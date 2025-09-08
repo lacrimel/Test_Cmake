@@ -1,0 +1,17 @@
+project(main)
+
+add_subdirectory(caculation)
+add_subdirectory(stu)#添加子工程文件
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+target_include_directories(${PROJECT_NAME}# 目标名，范围，头文件路径
+PUBLIC
+${Stu_Dir}
+# ${PROJECT_SOURCE_DIR}/src/stu
+)
+
+target_link_libraries(${PROJECT_NAME} #目标名，范围，库名
+PUBLIC
+stu
+)

@@ -1,0 +1,17 @@
+project(stu)
+
+# add_subdirectory(caculation)
+
+add_library(${PROJECT_NAME}
+SHARED
+stu.cpp
+)
+target_include_directories(${PROJECT_NAME}
+PUBLIC
+${Caculation_Dir}
+)
+
+target_link_libraries(${PROJECT_NAME}
+PUBLIC
+caculation
+)

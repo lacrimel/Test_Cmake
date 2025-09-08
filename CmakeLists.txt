@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.12)
+project(TEST_CMAKE 
+VERSION 0.0.1
+DESCRIPTION "A TEST OF CMAKE"
+HOMEPAGE_URL "https://github.com/lacrimel/Test_Cmake"
+)
+
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)#设置输出目录
+set(Stu_Dir ${PROJECT_SOURCE_DIR}/src/stu)
+set(Caculation_Dir ${PROJECT_SOURCE_DIR}/src/caculation)
+
+
+add_subdirectory(src)#添加子工程文件夹
